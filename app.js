@@ -47,8 +47,11 @@ inputField.addEventListener('keyup', function () {
   // console.log(inputValue)
 
 tableRow.forEach((tableData)=>{
-   // tableData.querySelector('td').textContent.toLowerCase().startsWith(inputValue) ? tableData.style.display = '' : tableData.style.display = 'none';
-  
+   //tableData.querySelector('td').textContent.toLowerCase() .startsWith(inputValue) ? tableData.style.display = '' : tableData.style.display = 'none';
+  Const dataFromTave = tableData.querySelector('td').textContent.toLowerCase()
+if(dataFromTave.includes(inputValue)){
+tableData.style.display="block"
+}else{tableData.style.display="none"}
   console.log(tableData.children);
 })
 
